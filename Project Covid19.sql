@@ -1,7 +1,5 @@
  --How did South Korean Data Collecting Policies contribute in keeping the Covid case and death rate low?
 
---The policies about tracking and vaccination
-
 SELECT *
 FROM PortfolioProject..CovidDeaths
 WHERE continent IS NOT NULL
@@ -47,7 +45,7 @@ WHERE continent IS NOT NULL
 GROUP BY location
 ORDER BY TotalDeathCount DESC
 
---Let’s break things down by continent
+--Letâ€™s break things down by continent
 SELECT continent, MAX(CAST(total_deaths AS int)) AS TotalDeathCount
 FROM PortfolioProject..CovidDeaths
 WHERE continent IS NOT NULL
